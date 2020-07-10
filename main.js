@@ -29,16 +29,16 @@ const thor = new Vingador(
   true
 );
 
-const ironMan = new Vingador("ironMan", "1,77", "85Kg", [
-  "Voo",
-  "Armamento Pesado",
+const SpiderMan = new Vingador("SpiderMan", "1,60", "50Kg", [
+  "Salvar Vidas",
+  "Lançar teias",
 ]);
 
 document.getElementById("lutar").onclick = function () {
   thor.lutar();
 };
 document.getElementById("lutar2").onclick = function () {
-  ironMan.lutar();
+  SpiderMan.lutar();
 };
 
 class OperacoesMatematicas {
