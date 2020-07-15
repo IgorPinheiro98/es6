@@ -1,44 +1,41 @@
-class Pessoa {
-  constructor(nome, altura, peso) {
-    this.nome = nome;
-    this.altura = altura;
-    this.peso = peso;
-  }
-}
+const arr = [1, 2, 3, 4, 5, 6];
+const cesta = ["banana", "melao", "abacate", "abacaxi"];
 
-class Vingador extends Pessoa {
-  constructor(nome, altura, peso, poderes, temArmadura, isMembroFundador) {
-    super(nome, altura, peso);
-    this.poderes = poderes;
-    this.temArmadura = temArmadura;
-    this.isMembroFundador = isMembroFundador;
-  }
+const squareArr = arr.map(function (item) {
+  return item * item * item;
+});
 
-  lutar() {
-    alert(
-      `${this.nome} está lutando usando ${this.poderes[0]}, pensando ${this.peso}, com a altura de ${this.altura}`
-    );
-  }
-}
-const thor = new Vingador(
-  "Thor",
-  "1,85",
-  "100Kg",
-  ["Super Força", "Raio"],
-  true,
-  true
-);
+const fruitPosition = cesta.map(function (item, index) {
+  return `a(o) ${item} está na posição ${index} do array`;
+});
 
-document.getElementById("lutar").onclick = function () {
-  thor.lutar();
-};
+//console.log(squareArr);
+//console.log(fruitPosition);
 
-class OperacoesMatematicas {
-  static soma(a, b, c) {
-    return a + b - c;
-  }
-}
+const sum = arr.reduce(function (total, next) {
+  return total + next;
+});
 
-const sum = OperacoesMatematicas.soma(1, 3, 4);
+//console.log(sum);
 
-alert(sum);
+const filter = arr.filter(function (item) {
+  return item % 2 === 0;
+});
+
+const filter2 = cesta.filter(function (item) {
+  return item === "banana";
+});
+
+//console.log(filter);
+//console.log(filter2);
+
+const find = arr.find(function (item) {
+  return item === 4;
+});
+
+const fruta = cesta.find(function (item) {
+  return item === "abacate";
+});
+
+console.log(find);
+console.log(fruta);
